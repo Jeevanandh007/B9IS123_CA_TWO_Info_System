@@ -10,9 +10,9 @@ function App() {
         <Container>
           <Navbar.Brand href="#">
             <img src={logo} alt="Logo" width="30" height="30" className="d-inline-block align-top"/>
-            <Navbar.Brand/>
-          <Container/>
-          <Navbar/>
+          </Navbar.Brand>
+        </Container>
+      </Navbar>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
