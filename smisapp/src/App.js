@@ -16,6 +16,10 @@ function App() {
             <Nav className="me-auto">
               <Nav.link href="#">Home</Nav.link>
               </Nav>
+              <Nav>
+                <Nav.link href="">Login</Nav.link>
+                <Nav.link href="">Sign Up</Nav.link>
+              </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
