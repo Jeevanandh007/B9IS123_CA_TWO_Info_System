@@ -11,6 +11,12 @@ function App() {
           <Navbar.Brand href="#">
             <img src={logo} alt="Logo" width="30" height="30" className="d-inline-block align-top"/>
           </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.link href="#">Home</Nav.link>
+              </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
       <header className="App-header">
