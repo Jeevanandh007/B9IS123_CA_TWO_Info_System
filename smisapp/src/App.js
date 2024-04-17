@@ -14,11 +14,15 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav"/>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.link href="#">Home</Nav.link>
+              <Nav.Link href="#">Home</Nav.Link>
               </Nav>
               <Nav>
-                <Nav.link href="">Login</Nav.link>
-                <Nav.link href="">Sign Up</Nav.link>
+                <Nav.Link href=""> Login </Nav.Link>
+                <Nav.Link href=""> SignUp </Nav.Link>
+              </Nav>
+              <Nav className="d-flex align-items-center">
+                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                <button className="btn btn-outline-success" type="submit">Search</button>
               </Nav>
           </Navbar.Collapse>
         </Container>
