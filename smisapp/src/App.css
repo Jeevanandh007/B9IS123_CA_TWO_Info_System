@@ -12,6 +12,12 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+/*Navigation bar*/
+
+.Navbar {
+  background-color: beige;
+  border-bottom: 1px solid green;
+}
 
 .App-header {
   background-color: #000000;
@@ -28,6 +34,14 @@
   color: #61dafb;
 }
 
+/*Customer Form styles*/
+
+.customer-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
