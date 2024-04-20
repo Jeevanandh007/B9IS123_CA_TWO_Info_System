@@ -23,3 +23,4 @@ class orderdetails(models.Model):
         return str(self.ORDER_ID)
 
 
+
