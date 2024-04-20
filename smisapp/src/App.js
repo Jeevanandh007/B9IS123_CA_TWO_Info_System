@@ -41,8 +41,11 @@ function App() {
             <FormGroup className='mb-3' controlId='formBasicEmail'>
               <FormLabel>Email Address</FormLabel>
               <FormControl type='email' placeholder='Enter Email'/>
-              <FormText></>
+              <FormText></FormText>
             </FormGroup>
+
+            <Button variant='primary' type='submit'>
+            </Button>
           </Form>
           </div>
       </header>
