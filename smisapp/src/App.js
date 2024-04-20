@@ -33,17 +33,26 @@ function App() {
         <div className='customer-form'>
           <Form>
             <FormGroup className='mb-3' controlId='formBasicName'>
-              <FormLabel>Name</FormLabel>
-              <FormControl type='email' placeholder='Enter email'/>
+              <FormLabel>Customer Name:</FormLabel>
+              <FormControl type='email' placeholder='Enter Name'/>
               <FormText className='texted-muted'></FormText>
             </FormGroup>
 
             <FormGroup className='mb-3' controlId='formBasicEmail'>
-              <FormLabel>Email Address</FormLabel>
+              <FormLabel>Email:</FormLabel>
               <FormControl type='email' placeholder='Enter Email'/>
-              <FormText></FormText>
+              <FormText className='texted-muted'></FormText>
             </FormGroup>
 
+            <FormGroup className='mb-3' controlId='formBasicEmail'>
+              <FormLabel>Phone Number:</FormLabel>
+              <FormControl type='phonenumber' placeholder='Enter phonenumber'/>
+            </FormGroup>
+
+            <FormGroup className='mb-3' controlId='formBasicProduct'>
+              <FormLabel>Product:</FormLabel>
+              <FormControl type='productname' placeholder='Enter product'/>
+            </FormGroup>
             <Button variant='primary' type='submit'>
             </Button>
           </Form>
