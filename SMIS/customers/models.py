@@ -14,10 +14,10 @@ class orderdetails(models.Model):
     COUNTRY=models.CharField(max_length=50)
     ORDER_STATUS=models.CharField(max_length=20,default='Pending')
     ORDER_DATE=models.DateField(auto_now_add=True)
-    ESTIMATED_DATE_OF_DELIVERY=models.DateField(null=True)
-    DELIVERY_METHOD = models.CharField(max_length=50,null=True)
-    INVOICE_NUMBER=models.CharField(max_length=50,null=True)
-    REMARKS=models.TextField(null=True)
+    ESTIMATED_DATE_OF_DELIVERY=models.DateField(null=True,blank=True)
+    DELIVERY_METHOD = models.CharField(max_length=50,null=True,blank=True)
+    INVOICE_NUMBER=models.CharField(max_length=50,null=True,blank=True)
+    REMARKS=models.TextField(null=True,blank=True)
 
     def __str__(self):
         return str(self.ORDER_ID)
