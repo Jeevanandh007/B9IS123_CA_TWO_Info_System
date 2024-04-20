@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Navbar, Nav, Container } from 'react-bootstrap'; 
+import { Navbar, Nav, Container, Form,FormGroup, FormLabel } from 'react-bootstrap'; 
 
 function App() {
   return (
@@ -28,6 +28,15 @@ function App() {
         </Container>
       </Navbar>
       <header className="App-header">
+        {/*customer form*/}
+
+        <div className='customer-form'>
+          <Form>
+            <FormGroup className='mb-3' controlId='formBasicName'>
+              <FormLabel>Name</FormLabel>
+            </FormGroup>
+          </Form>
+          </div>
       </header>
     </div>
   );
