@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Navbar, Nav, Container, Form,FormGroup, FormLabel } from 'react-bootstrap'; 
+import { Navbar, Nav, Container, Form,FormGroup, FormLabel,Button, FormControl, FormText } from 'react-bootstrap'; 
 
 function App() {
   return (
@@ -34,6 +34,14 @@ function App() {
           <Form>
             <FormGroup className='mb-3' controlId='formBasicName'>
               <FormLabel>Name</FormLabel>
+              <FormControl type='email' placeholder='Enter email'/>
+              <FormText className='texted-muted'></FormText>
+            </FormGroup>
+
+            <FormGroup className='mb-3' controlId='formBasicEmail'>
+              <FormLabel>Email Address</FormLabel>
+              <FormControl type='email' placeholder='Enter Email'/>
+              <FormText></>
             </FormGroup>
           </Form>
           </div>
