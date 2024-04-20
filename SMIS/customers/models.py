@@ -12,11 +12,11 @@ class orderdetails(models.Model):
     ADDRESS=models.TextField()
     PINCODE=models.CharField(max_length=10)
     COUNTRY=models.CharField(max_length=50)
-    ORDER_STATUS=models.CharField(max_length=50,default='Pending')
+    ORDER_STATUS=models.CharField(max_length=20,default='Pending')
     ORDER_DATE=models.DateField(auto_now_add=True)
-    ESTIMATED_DATE_OF_DELIVERY=models.DateField()
-    DELIVERY_METHOD = models.CharField(max_length=50)
-    INVOICE_NUMBER=models.CharField(max_length=50)
+    ESTIMATED_DATE_OF_DELIVERY=models.DateField(null=True)
+    DELIVERY_METHOD = models.CharField(max_length=50,null=True)
+    INVOICE_NUMBER=models.CharField(max_length=50,null=True)
     REMARKS=models.TextField(null=True)
 
     def __str__(self):
