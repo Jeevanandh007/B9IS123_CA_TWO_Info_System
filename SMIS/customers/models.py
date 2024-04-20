@@ -2,11 +2,24 @@ from django.db import models
 
 # Create your models here.
 
-class order_details(models.):
+class orderdetails(models.):
+    ORDER_ID=models.AutoField(primary_key=True)
     CUSTOMER_NAME=models.CharField(max_length=150)
     EMAIL=models.EmailField()
     PHONE_NUMBER=models.CharField(max_length=10)
     PRODUCT=models.CharField(max_length=50)
     DOSAGE=models.IntegerField()
     ADDRESS=models.TextField()
-    PINCODE=models
+    PINCODE=models.CharField(max_length=10)
+    COUNTRY=models.CharField(max_length=50)
+    ORDERE_STATUS=models.CharField(max_length=50,default='Pending')
+    ORDER_DATE=models.DateField(auto_now_add=True)
+    ESTIMATED_DATE_OF_DELIVERY=models.DateField()
+    DELIVERY_METHOD = models.CharField(max_length=50)
+    INVOICE_NUMBER=models.CharField(max_length=50)
+    REMARKS=models.TextField(null=True)
+
+    def __str__(self):
+        return str(self.ORDER_ID)
+
+
