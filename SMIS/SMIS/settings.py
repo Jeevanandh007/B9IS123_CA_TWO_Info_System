@@ -77,9 +77,9 @@ WSGI_APPLICATION = "SMIS.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'create',
-        'USER': 'postgres',
-        'PASSWORD': 'password123',
+        'NAME': 'db_smis',
+        'USER': 'wsl_db',
+        'PASSWORD': 'pass',
         'HOST': 'localhost',
         'PORT': '5432'
     }
