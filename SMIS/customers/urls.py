@@ -25,3 +25,16 @@ urlpatterns = [
     path('', Index.as_view(), name='index'),    
     #path('order-details/', OrderDetailsListCreate.as_view(), name='order-details'),
 ]
+
+from django.urls import path
+from rest_framework.routers import DefaultRouter
+from .views import createorderlistview
+
+router = DefaultRouter()
+router.register(r'order', createorderlistview, basename='order')
+
+urlpatterns = [
+    path('search/', createorderlistview.as_view({'get': 'search_by_po_number'}), name='search_by_po_number'),
+]
+
+urlpatterns += router.urls

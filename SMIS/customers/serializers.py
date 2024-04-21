@@ -5,3 +5,6 @@ class orderdetailsserializer(serializers.ModelSerializer):
     class Meta:
         model = orderdetails
         fields = '__all__'
+        
+class SearchOrderSerializer(serializers.Serializer):
+    po_number = serializers.CharField()
