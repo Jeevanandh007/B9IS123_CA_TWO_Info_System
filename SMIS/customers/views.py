@@ -8,10 +8,10 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 from .serializers import OrderDetailsSerializer
-from .models import customers
+from .models import orderdetails
 
 # Create your views here.
 
-class OrderDetailsListCreate(viewsets.ModelViewSet):
+class createorderlistview(viewsets.ModelViewSet):
     serializer_class = OrderDetailsSerializer
-    queryset = OrderDetails.objects.all()
+    queryset = orderdetails.objects.all()

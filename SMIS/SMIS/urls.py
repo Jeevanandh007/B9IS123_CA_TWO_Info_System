@@ -17,12 +17,17 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework import routers
+from rest_framework.routers import DefaultRouter
 from logistics import views
 from customers import views
+#from .views import createorderlistview
+
+# Create a router and register our viewset with it
+router = routers.DefaultRouter()
+router.register(r'orderdetails', views.createorderlistview, 'customers')
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', include('customers.urls')),
+    #path('', include(orderdetails.urls)),
     path('api/', include(router.urls)),
 ]
