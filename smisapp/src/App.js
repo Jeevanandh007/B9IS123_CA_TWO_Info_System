@@ -96,7 +96,7 @@ function App() {
                 </Col>
               </Row>
 
-              <Row className="mb-3">
+              <Row className="mb-4">
                 <Col sm={{ span: 10, offset: 2 }}>
                   <Button variant='primary' type='submit'>Submit</Button>
                 </Col>
