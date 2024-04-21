@@ -4,5 +4,5 @@ from django.contrib import admin
 from .models import products
 admin.site.register(products)
 
-from .models import dosages
-admin.site.register(dosages)
+from .models import dosage
+admin.site.register(dosage)
