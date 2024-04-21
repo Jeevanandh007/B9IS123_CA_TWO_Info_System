@@ -7,26 +7,24 @@ function App() {
   return (
     <div className="App">
       <Navbar bg="light" expand="lg" className="Navbar">
-        <Container>
+        <header-Container>
           <Navbar.Brand href="#" className="Navbar-brand">
             <img src={logo} alt="Logo" width="30" height="30" className="d-inline-block align-top" />
             Sales Management System
           </Navbar.Brand>
+          
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#">Home</Nav.Link>
             </Nav>
-            <Nav>
-              <Nav.Link href="">Login</Nav.Link>
-              <Nav.Link href="">SignUp</Nav.Link>
-            </Nav>
+            
             <Form className="d-flex">
               <FormControl type="search" placeholder="Search" className="me-2" aria-label="Search" />
               <Button variant="primary">Search</Button>
             </Form>
           </Navbar.Collapse>
-        </Container>
+        </header-Container>
       </Navbar>
       <header className="App-header">
         <Container>
@@ -93,12 +91,6 @@ function App() {
                 <FormLabel column sm={2}>Order Status:</FormLabel>
                 <Col sm={10}>
                   <FormControl type='text' placeholder='Enter Order Status' />
-                </Col>
-              </Row>
-
-              <Row className="mb-4">
-                <Col sm={{ span: 10, offset: 2 }}>
-                  <Button variant='primary' type='submit'>Submit</Button>
                 </Col>
               </Row>
             </Form>
