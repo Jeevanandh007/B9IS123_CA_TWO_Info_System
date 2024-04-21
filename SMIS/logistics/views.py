@@ -8,3 +8,4 @@ from .models import products
 class updateproductsview(viewsets.ModelViewSet):
     serializer_class =updateproductserializer
     queryset = products.objects.all()
+

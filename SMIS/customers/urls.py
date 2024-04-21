@@ -18,10 +18,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import Index
-from .views import OrderDetailsListCreate
+#from .views import OrderDetailsListCreate
 
 urlpatterns = [
 
     path('', Index.as_view(), name='index'),    
-    path('order-details/', OrderDetailsListCreate.as_view(), name='order-details'),
+    #path('order-details/', OrderDetailsListCreate.as_view(), name='order-details'),
 ]
