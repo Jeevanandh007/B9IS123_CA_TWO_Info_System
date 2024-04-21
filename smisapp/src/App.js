@@ -7,24 +7,31 @@ function App() {
   return (
     <div className="App">
       <Navbar bg="light" expand="lg" className="Navbar">
-        <header-Container>
+        <header_Container>
           <Navbar.Brand href="#" className="Navbar-brand">
             <img src={logo} alt="Logo" width="30" height="30" className="d-inline-block align-top" />
             Sales Management System
           </Navbar.Brand>
-          
+
+          {/*toggle button*/}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+          {/*collapsible navbar */}
           <Navbar.Collapse id="basic-navbar-nav">
+
+            {/* navigation aligned to left*/}
             <Nav className="me-auto">
               <Nav.Link href="#">Home</Nav.Link>
             </Nav>
             
-            <Form className="d-flex">
+            <Nav className='mr-auto'>
+            <Form className="d-flex ms-auto">
               <FormControl type="search" placeholder="Search" className="me-2" aria-label="Search" />
               <Button variant="primary">Search</Button>
             </Form>
+            </Nav>
           </Navbar.Collapse>
-        </header-Container>
+        </header_Container>
       </Navbar>
       <header className="App-header">
         <Container>
