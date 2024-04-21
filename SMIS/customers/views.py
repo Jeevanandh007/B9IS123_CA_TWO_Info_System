@@ -5,10 +5,13 @@
 # class Index(TemplateView):
 #     template_name ='customers/index.html'
 
-from rest_framework import generics
-from .models import OrderDetails
+from django.shortcuts import render
+from rest_framework import viewsets
 from .serializers import OrderDetailsSerializer
+from .models import customers
 
-class OrderDetailsListCreate(generics.ListCreateAPIView):
-    queryset = OrderDetails.objects.all()
+# Create your views here.
+
+class OrderDetailsListCreate(viewsets.ModelViewSet):
     serializer_class = OrderDetailsSerializer
+    queryset = OrderDetails.objects.all()
