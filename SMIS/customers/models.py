@@ -20,10 +20,10 @@ class orderdetails(models.Model):
     REMARKS=models.TextField(null=True,blank=True)
     PO_NUMBER=models.CharField(max_length=15,blank=True)
 
-    def save():
-        if not self.pk:
-            self.PO_NUMBER=f"PO#{self.ORDER_ID}"
-        super().save()
+    #def save():
+        #if not self.pk:
+            #self.PO_NUMBER=f"PO#{self.ORDER_ID}"
+        #super().save()
 
     def __str__(self):
         return str(self.ORDER_ID)
