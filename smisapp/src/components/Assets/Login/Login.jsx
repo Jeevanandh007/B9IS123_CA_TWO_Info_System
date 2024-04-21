@@ -19,16 +19,11 @@ const Login =() => {
                 </div>
 
                 <div className="input">
-                    <img src={email_icon} alt=""/>
-                    <input type="text" placeholder="Email Id"/>
-                </div>
-
-                <div className="input">
                     <img src={password_icon} alt=""/>
                     <input type="text" placeholder="Password"/>
                 </div>
             </div>
-            <div className="forgot-password">Forgot Password <span>Clich Here!</span></div>
+        
             <div className="submit-container">
                 <div className="submit">Login</div>
             </div>
