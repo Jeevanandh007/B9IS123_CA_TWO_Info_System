@@ -7,17 +7,17 @@ body {
 
 /* Container Alignment and Background */
 .header_container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
+  
+  
 }
 
 /* Navbar Styling */
 .Navbar {
-  background-color: #f8f9fa;
+  background-color: #5f96cc;
   border-bottom: 1px solid #dee2e6;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ 
+
 }
 
 .Navbar-brand img {
@@ -52,6 +52,7 @@ body {
 
 .form-group {
   margin-bottom: 40px;
+  
 }
 
 .form-label {
@@ -95,9 +96,7 @@ body {
     padding: 10px;
   }
 
-  .Navbar-brand img {
-    margin-right: 0;
-  }
+ 
 
   .form-control {
     width: 100%;
@@ -106,4 +105,23 @@ body {
   .btn-primary {
     width: 100%;
   }
+
 }
+
+.header_title {
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  background-color: #6266c9;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(255, 255, 255);
+  position:fixed;
+  height: 100px;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+}
+
+
+
