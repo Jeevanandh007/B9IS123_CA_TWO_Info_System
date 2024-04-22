@@ -9,3 +9,4 @@ nvm
 node.js 14
 python3  manage.py makemigrations -  with new DB
 python3  manage.py migrate
+npm install react-router-dom

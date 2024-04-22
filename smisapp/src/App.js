@@ -1,10 +1,22 @@
 import React from 'react';
-import './App.css';
-import login from './components/Assets/Login/Login';
+//import './App.css';
+//import login from './components/Assets/Login/Login';
+import Navbar from "./components/Navbar";
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+//import Home from "./pages";
+import Order from "./pages/order";
+import Login from "./pages/login";
+import Search from "./pages/search";
 
 
+import { Nav, Form,  FormControl,Button } from 'react-bootstrap';
 
-import { Nav, Container, Form, FormLabel, FormControl, Button, Row, Col } from 'react-bootstrap';
+
 
 function App() {
   return (
@@ -13,7 +25,7 @@ function App() {
     <div className="header_title">
         
         <Nav href="#" className="Project">
-            Sales Management Information System
+            <h1>Sales Management Information System</h1>
           </Nav>
 
           <Nav className='mr-auto'>
@@ -21,87 +33,26 @@ function App() {
               <FormControl type="search" placeholder="Enter PO Number" className="me-2" aria-label="Search" />
               <Button variant="primary">Search</Button>
             </Form>
-            </Nav>
+          </Nav>
 
       </div>
-      
+     
       
 
       <body className="App-header">
-        <Container>
 
-          <div className='customer-form'>
-            <h2>Customer Order Placement Form</h2>
-            <Form>
+      <Router>
+            <Navbar />
+            <Routes>
+                
+                <Route path="/order" element={<Order />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/login" element={<Search />} />
+                
               
-              <Row className="mb-3">
-                <FormLabel column sm={2}>Customer Name:</FormLabel>
-                <Col sm={10}>
-                  <FormControl type='text' placeholder='Enter Name' />
-                </Col>
-              </Row>
-
-              <Row className="mb-3">
-                <FormLabel column sm={2}>Email:</FormLabel>
-                <Col sm={10}>
-                  <FormControl type='email' placeholder='Enter Email' />
-                </Col>
-              </Row>
-
-              <Row className="mb-3">
-                <FormLabel column sm={2}>Phone Number:</FormLabel>
-                <Col sm={10}>
-                  <FormControl type='tel' placeholder='Enter Phone Number' />
-                </Col>
-              </Row>
-
-              <Row className="mb-3">
-                <FormLabel column sm={2}>Product:</FormLabel>
-                <Col sm={10}>
-                  <FormControl type='text' placeholder='Enter Product' />
-                </Col>
-              </Row>
-
-              <Row className="mb-3">
-                <FormLabel column sm={2}>Dosage:</FormLabel>
-                <Col sm={10}>
-                  <FormControl type='text' placeholder='Enter Dosage' />
-                </Col>
-              </Row>
-
-              <Row className="mb-3">
-                <FormLabel column sm={2}>Address:</FormLabel>
-                <Col sm={10}>
-                  <FormControl type='text' placeholder='Enter Address' />
-                </Col>
-              </Row>
-
-              <Row className="mb-3">
-                <FormLabel column sm={2}>Pincode:</FormLabel>
-                <Col sm={10}>
-                  <FormControl type='text' placeholder='Enter Pincode' />
-                </Col>
-              </Row>
-
-              <Row className="mb-3">
-                <FormLabel column sm={2}>Country:</FormLabel>
-                <Col sm={10}>
-                  <FormControl type='text' placeholder='Enter Country' />
-                </Col>
-              </Row>
-
-              <Row className="mb-3">
-                <FormLabel column sm={2}>Order Status:</FormLabel>
-                <Col sm={10}>
-                  <FormControl type='text' placeholder='Enter Order Status' />
-                </Col>
-              </Row>
-              <button type="submit">Submit</button>
-            </Form>
-          </div>
-
-          
-        </Container>
+            </Routes>
+        </Router>
+       
       </body>
     </div>
   );

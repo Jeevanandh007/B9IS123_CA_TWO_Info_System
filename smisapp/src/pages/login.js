@@ -1,13 +1,17 @@
 import React from "react";
-import './Login.css'
-
-import user_icon from '../Assets/person.png'
-import email_icon from '../Assets/email.png'
-import password_icon from '../Assets/password.png'
+ 
+//import './Login.css'
+import user_icon from './Assets/person.png'
+//import email_icon from '../Assets/email.png'
+import password_icon from './Assets/password.png'
+//import Dashboard from "./pages/dashboard";
 
 const Login =() => {
     return (
         <div className="container">
+            <h2>
+                LOGISTICS TEAM USER LOGIN
+            </h2>
             <div className="header">
                 <div className="text">Login</div>
             </div>
