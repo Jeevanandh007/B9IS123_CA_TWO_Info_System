@@ -1,9 +1,8 @@
 from django.shortcuts import render
-#from django.views.generic import TemplateView
+
 
 # # Create your views here.
-#class Index(TemplateView):
-    # template_name ='customers/index.html'
+
 
 from rest_framework import viewsets, status
 #from rest_framework.decorators import action
@@ -33,3 +32,10 @@ class filterorderstatus(viewsets.ModelViewSet):
     serializer_class = orderdetailsserializer
     filter_backends = [DjangoFilterBackend]
     filterset_fields= ['ORDER_STATUS']
+
+import requests
+from django.shortcuts import render
+def home(request):
+    response =requests.get('http://127.0.0.1:8000/api/order/')
+    data =response.json()
+    return render(request,'index.html',{'data':data})

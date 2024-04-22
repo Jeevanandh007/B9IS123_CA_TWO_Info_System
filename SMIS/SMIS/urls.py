@@ -39,6 +39,7 @@ from logistics import views as logistics_views
 from customers import views as customers_views
 from user_login import views as login_views
 
+
 from user_login.views import loginviewapi
 
 # Create a router and register our viewset with it

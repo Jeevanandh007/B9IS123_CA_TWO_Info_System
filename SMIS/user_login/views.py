@@ -15,10 +15,13 @@ class loginviewapi(APIView):
     def post(self,request):
         username = request.data.get('username')
         password = request.data.get('password')
-        user = authenticate(username=username, password=password)
+        print(username,password)
+        User = authenticate(request,username=username, password=password)
+        print("User",User)
 
-        if user:
-            login(request,user)
+        if User:
+            
+            login(request,User)
             return Response({"Login success"},status=status.HTTP_200_OK)
         else :
             return Response({"Invalid Username or password"},status=status.HTTP_401_UNAUTHORIZED)
