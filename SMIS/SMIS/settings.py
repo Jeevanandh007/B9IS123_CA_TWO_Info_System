@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'customers',
     'logistics',
     'user_login',
+    'django_filters',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

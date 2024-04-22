@@ -28,7 +28,7 @@ class orderdetails(models.Model):
         if not self.ORDER_ID:  # If ORDER_ID is not set yet
             super().save(*args, **kwargs)  # Save the order to get ORDER_ID
             # Now generate PO_NUMBER with 'PO#' and the ORDER_ID
-            self.PO_NUMBER = f"PO#{self.ORDER_ID}"
+            self.PO_NUMBER = f"PO{self.ORDER_ID}"
             self.save()  # Save again to update PO_NUMBER
         else:
             super().save(*args, **kwargs)

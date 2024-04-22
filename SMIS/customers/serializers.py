@@ -6,5 +6,3 @@ class orderdetailsserializer(serializers.ModelSerializer):
         model = orderdetails
         fields = '__all__'
         
-class SearchOrderSerializer(serializers.Serializer):
-    po_number = serializers.CharField()

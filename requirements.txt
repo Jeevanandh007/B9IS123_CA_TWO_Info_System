@@ -3,3 +3,9 @@ Python 3
 Django 5.0.4
 HTML5
 REST API
+pip install django-filter
+npm
+nvm
+node.js 14
+python3  manage.py makemigrations -  with new DB
+python3  manage.py migrate

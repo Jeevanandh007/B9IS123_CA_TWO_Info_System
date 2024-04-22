@@ -42,11 +42,14 @@ from customers import views as customers_views
 router = routers.DefaultRouter()
 router.register(r'order', customers_views.createorderlistview, 'customers')
 router.register(r'products', logistics_views.updateproductsview, 'logistics')
+router.register(r'po_number',customers_views.searchpoview, 'po_number')
+router.register(r'order_status',customers_views.filterorderstatus, 'order_status')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     # Include customer app's URLs
-    path('api/customers/', include('customers.urls')),
+    #path('api/customers/', include('customers.urls')),
+    
 ]
 
