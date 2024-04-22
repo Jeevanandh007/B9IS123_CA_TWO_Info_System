@@ -37,6 +37,9 @@ from django.urls import path, include
 from rest_framework import routers
 from logistics import views as logistics_views
 from customers import views as customers_views
+from user_login import views as login_views
+
+from user_login.views import loginviewapi
 
 # Create a router and register our viewset with it
 router = routers.DefaultRouter()
@@ -45,12 +48,12 @@ router.register(r'products', logistics_views.updateproductsview, 'logistics')
 router.register(r'dosages', logistics_views.updatedosagesview, 'dosages')
 router.register(r'po_number',customers_views.searchpoview, 'po_number')
 router.register(r'order_status',customers_views.filterorderstatus, 'order_status')
-
+#router.register(r'login',login_views.loginviewapi, 'login')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     # Include customer app's URLs
     #path('api/customers/', include('customers.urls')),
-    
+    path('api/login/', loginviewapi.as_view(), name='login'),
 ]
 
