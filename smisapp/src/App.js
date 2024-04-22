@@ -11,7 +11,7 @@ import {
 //import Home from "./pages";
 import Order from "./pages/order";
 import Login from "./pages/login";
-import Search from "./pages/search";
+import Searchbox from "./pages/searchbox";
 
 
 import { Nav, Form,  FormControl,Button } from 'react-bootstrap';
@@ -47,7 +47,7 @@ function App() {
                 
                 <Route path="/order" element={<Order />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/login" element={<Search />} />
+                <Route path="/login" element={<Searchbox />} />
                 
               
             </Routes>

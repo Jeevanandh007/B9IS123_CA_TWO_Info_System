@@ -10,7 +10,7 @@ const Navbar = () => {
                         ORDER
                     </NavLink>
                     
-                    <NavLink to="/search" activeStyle>
+                    <NavLink to="/searchbox" activeStyle>
                         SEARCH PO
                     </NavLink>
                     
