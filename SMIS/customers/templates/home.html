@@ -21,7 +21,7 @@
 </head>
 <body>
     <!-- Customer Form -->
-    <form id="customerForm" >
+    <form id="customerForm" action="{% url 'dashboard' %}"   method="post">
         {% csrf_token %}
         <table>
             <tr>    

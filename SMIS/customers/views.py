@@ -35,7 +35,45 @@ class filterorderstatus(viewsets.ModelViewSet):
 
 import requests
 from django.shortcuts import render
+from django.http import JsonResponse
+
 def home(request):
-    response =requests.get('http://127.0.0.1:8000/api/order/')
-    data =response.json()
-    return render(request,'home.html',{'data': data})
+    
+    if request.method == 'POST':
+       
+        customer_name = request.POST.get('customerName')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        product = request.POST.get('product')
+        dosage = request.POST.get('dosage')
+        address = request.POST.get('address')
+        pincode = request.POST.get('pincode')
+        country = request.POST.get('country')
+        
+        
+        data = {
+            'CUSTOMER_NAME': customer_name,
+            'EMAIL': email,
+            'PHONE_NUMBER': phone,
+            'PRODUCT': product,
+            'DOSAGE': dosage,
+            'ADDRESS': address,
+            'PINCODE': pincode,
+            'COUNTRY': country
+        }
+    
+    
+     
+        response = requests.post('http://127.0.0.1:8000/api/order/', data=data)
+        
+        
+        if response.status_code == 201:  
+            return JsonResponse({'success': True})
+        else:
+            return JsonResponse({'success': False, 'error': 'Failed to submit form'})
+
+    else:
+       
+        response = requests.get('http://127.0.0.1:8000/api/order/')
+        data = response.json()
+        return render(request, 'home.html', {'data': data})
