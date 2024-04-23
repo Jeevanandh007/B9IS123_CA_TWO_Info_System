@@ -12,3 +12,5 @@ Postgres DB
 python3  manage.py makemigrations -  with new DB
 python3  manage.py migrate
 
+smisapp react - not used
+node_modules - not used
