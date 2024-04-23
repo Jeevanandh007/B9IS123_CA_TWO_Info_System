@@ -55,6 +55,7 @@ urlpatterns = [
     path('api/', include(router.urls)),
     # Include customer app's URLs
     #path('api/customers/', include('customers.urls')),
-    path('api/login/', loginviewapi.as_view(), name='login'),
+    #path('api/login/', loginviewapi.as_view(), name='login'),
+    path('customers/',include('customers.urls')),
 ]
 
