@@ -74,6 +74,20 @@ def home(request):
 
     else:
        
-        response = requests.get('http://127.0.0.1:8000/api/order/')
-        data = response.json()
-        return render(request, 'home.html', {'data': data})
+        #response = requests.get('http://127.0.0.1:8000/api/order/')
+        #data = response.json()
+        #return render(request, 'home.html', {'data': data})
+     # Handle search request
+        search_query = request.GET.get('search_query')
+        if search_query:
+            search_response = requests.get('http://127.0.0.1:8000/api/po_number/', params={'search': search_query})
+            if search_response.status_code == 200:
+                search_data = search_response.json()
+                
+                return render(request, 'home.html', {'search_data': search_data})
+            else:
+                return JsonResponse({'success': False, 'error': 'Failed to fetch search results'})
+        else:
+            response = requests.get('http://127.0.0.1:8000/api/order/')
+            data = response.json()
+            return render(request, 'home.html', {'data': data})
