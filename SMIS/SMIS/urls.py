@@ -59,5 +59,6 @@ urlpatterns = [
     #path('api/customers/', include('customers.urls')),
     #path('api/login/', loginviewapi.as_view(), name='login'),
     path('customers/',include('customers.urls')),
+    path('logistics/',include('logistics.urls')),
 ]
 
