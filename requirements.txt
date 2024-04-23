@@ -1,12 +1,14 @@
-In Virtual Environment myenv
+
 Python 3
 Django 5.0.4
 HTML5
+CSS
+Django Rest Framework
 REST API
-pip install django-filter
+django-filter
 npm
 nvm
-node.js 14
+Postgres DB
 python3  manage.py makemigrations -  with new DB
 python3  manage.py migrate
-npm install react-router-dom
+
