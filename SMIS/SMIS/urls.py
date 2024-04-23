@@ -38,7 +38,8 @@ from rest_framework import routers
 from logistics import views as logistics_views
 from customers import views as customers_views
 from user_login import views as login_views
-
+from django.urls import path
+from . import views
 
 from user_login.views import loginviewapi
 
@@ -53,6 +54,7 @@ router.register(r'order_status',customers_views.filterorderstatus, 'order_status
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('', views.index, name='index'),
     # Include customer app's URLs
     #path('api/customers/', include('customers.urls')),
     #path('api/login/', loginviewapi.as_view(), name='login'),
