@@ -1,65 +1,77 @@
+
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>SMIS</title>
-    <h1>
-        Sales Management Information System
-    </h1>
-Login button for logistics
+    <meta charset="UTF-8">
+    <title>SMIS</title>
 
+    <h1>Sales Management Information System</h1>
+    <form id="searchForm" >
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td><label for="searchName">Search by PO#</label></td>
+                <td><input type="text" id="searchName" name="searchName" required></td>
+                 <td><input type="submit" value="Search"></td>
+            </tr>
+        </table>        
+    </form>
 </head>
-
 <body>
-    <table border="1">
-        <tr>
-          <th>Order ID</th>
-          <th>Customer Name</th>
-          <th>Email</th>
-          <th>Phone Number</th>
-          <th>Product</th>
-          <th>Dosage</th>
-          <th>Address</th>
-          <th>Pincode</th>
-          <th>Country</th>
-          <th>Order Status</th>
-          <th>Order Date</th>
-          <th>Estimated Date of Delivery</th>
-          <th>Delivery Method</th>
-          <th>Invoice Number</th>
-          <th>Remarks</th>
-          <th>PO Number</th>
-        </tr>
-        {% for orderdetail in data %}
-        <tr>
-          <td>{{ orderdetail.ORDER_ID }}</td>
-          <td>{{ orderdetail.CUSTOMER_NAME }}</td>
-          <td>{{ orderdetail.EMAIL }}</td>
-          <td>{{ orderdetail.PHONE_NUMBER }}</td>
-          <td>{{ orderdetail.PRODUCT }}</td>
-          <td>{{ orderdetail.DOSAGE }}</td>
-          <td>{{ orderdetail.ADDRESS }}</td>
-          <td>{{ orderdetail.PINCODE }}</td>
-          <td>{{ orderdetail.COUNTRY }}</td>
-          <td>{{ orderdetail.ORDER_STATUS }}</td>
-          <td>{{ orderdetail.ORDER_DATE }}</td>
-          <td>{{ orderdetail.ESTIMATED_DATE_OF_DELIVERY }}</td>
-          <td>{{ orderdetail.DELIVERY_METHOD }}</td>
-          <td>{{ orderdetail.INVOICE_NUMBER }}</td>
-          <td>{{ orderdetail.REMARKS }}</td>
-          <td>{{ orderdetail.PO_NUMBER }}</td>
-        </tr>
-        {% endfor %}
-      </table>
-      
+    <!-- Customer Form -->
+    <form id="customerForm" >
+        {% csrf_token %}
+        <table>
+            <tr>    
+                <td><label for="customerName">Customer Name</label></td>
+                <td><label>:</label></td>
+                <td><input type="text" id="customerName" name="customerName" required></td><br><br>
+            </tr>
+            <tr>    
+                <td><label for="email">Email</label></td>
+                <td><label>:</label></td>
+                <td><input type="email" id="email" name="email" required></td><br><br>
+            </tr>
+            <tr>    
+                <td><label for="phone">Phone Number</label></td>
+                <td><label>:</label></td>
+                <td><input type="tel" id="phone" name="phone" required></td><br><br>
+            </tr>
+            <tr>    
+                <td><label for="product">Product</label></td>
+                <td><label>:</label></td>
+                <td><input type="text" id="product" name="product" required></td><br><br>
+            </tr>
+            <tr>    
+                <td><label for="dosage">Dosage</label></td>
+                <td><label>:</label></td>
+                <td><input type="text" id="dosage" name="dosage" required></td><br><br>
+            </tr>
+            <tr>    
+                <td><label for="address">Address</label></td>
+                <td><label>:</label></td>
+                <td><textarea id="address" name="address" required></textarea></td><br><br>
+            </tr>
+            <tr>    
+                <td><label for="pincode">Pincode</label></td>
+                <td><label>:</label></td>
+                <td><input type="text" id="pincode" name="pincode" required></td><br><br>
+            </tr>
+            <tr>    
+                <td><label for="country">Country</label></td>
+                <td><label>:</label></td>
+                <td><input type="text" id="country" name="country" required></td><br><br>
+            </tr>
+            <tr>    
+                <td></td>
+                <td></td>
+                <td><input type="submit" value="Submit"></td><br><br>
+            </tr>        
+    </table>
+    </form>
+
+    <script src="{% static 'scripts.js' %}"></script>
 </body>
-
-Submit
-
-
-
-
-
-
-
 </html>
